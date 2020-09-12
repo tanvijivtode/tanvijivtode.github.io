@@ -1,0 +1,88 @@
+logo{
+    padding-top: 36px;
+}
+
+hr {
+  height:1px;
+  background-color:lightgray;
+}
+
+body, html {
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img{
+ margin: 5px;
+ transition: all 2s;
+ border-radius: 6px;
+}
+
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 5px;
+}
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.clear {
+  border: none;
+  border-radius: 4px; /* Remove borders */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.w3-opacity {
+  opacity: .75;
+}
+
+.xunder {
+  text-decoration: none;
+}
+
+.bg {
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom {
+    position: relative;
+    margin: 0 auto;
+    bottom: 2px;
+}
+
+.animated {
+    padding-top:95px;
+    margin-bottom:0px;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-delay: 4s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn{
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}

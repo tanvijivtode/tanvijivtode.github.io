@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tanvi Jivtode</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.fa-angle-double-down {font-size:20px}
+.fa-cog {font-size:20px}
+.fa-pinterest, .fa-linkedin-square, .fa-envelope, .fa-github {font-size: 35px; padding: 5px}
+</style>
+
+<script src="scripts.js"></script>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-opacity w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+    <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Work Experience</a>
+    <a href="#organizations" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Organizations</a>
+    <a href="#art" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Artwork</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+    <a href="#work" class="w3-bar-item w3-button w3-padding-large">Work Experience</a>
+    <a href="#organizations" class="w3-bar-item w3-button w3-padding-large">Organizations</a>
+    <a href="#art" class="w3-bar-item w3-button w3-padding-large">Artwork</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="bg ">
+<header class="w3-container w3-center" style="padding:200px 16px;">
+  <h1 id="header1" class="w3-margin w3-jumbo"></h1>
+  <h3 id="header2" class="w3-xlarge"></h3>
+  <div class= "animated fadeIn">
+    <p class="w3-large" style="margin-bottom:5px;">Start scrolling to learn more about me!</p>
+    <button class="clear" onclick="smoothScroll(document.getElementById('about'))"><i class="fa fa-angle-double-down w3-hover-opacity"></i> </button>
+  </div>
+</header>
+</div>
+
+<!-- About Me -->
+<div  id="about" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <h1 class="w3-content w3-center"><b>About Me</b></h1>
+  <div class="w3-content">
+    <hr>
+    <div class="w3-third w3-center">
+      <img src="portrait_cropped.jpg" alt="Image of Tanvi Jivtode" style="width:250px;height:250px">
+    </div>
+
+    <div class="w3-twothird">
+      <h5 >I'm currently a junior at the University of Michigan- Ann Arbor. I'm interested in the embedded systems space,
+        particularly firmware development, and am currently learning key embedded concepts through my coursework. I am also involved in organizations including
+        Michigan Electric Racing (MER), Women in Electrical and Computer Engineering (WECE), Society of Women Engineers (SWE), and Michigan Sahana. Outside of academics, I'm passionate 
+        about various art forms-- from visual artwork, particularly painting, to Indian classical dance. I'm currently starting to explore new mediums, such as 
+        digital artwork and oil painting!
+      </h5>
+
+      <h5 class="w3-text-grey">Click <a href="tjivtode_resume.pdf" target="_blank">here</a> for a pdf of my resume.</h5>
+    </div>
+  </div>
+</div>
+
+<!--Work Experience-->
+<div  id="work" class="w3-row-padding w3-padding-64 w3-container">
+  <h1 class="w3-content  w3-center"><b>Work Experience</b></h1>
+  <div class="w3-content">
+    <hr>
+    <div class="w3-twothird">
+
+      <h3><b>Mcity at University of Michigan</b></h3>
+      <h5>I'm currently working as a Software Engineering Intern at Mcity, an autonomous/connected vehicle test facility.</h5>
+
+      <p >My current project focuses on creating a lightning detection system that is configured to send alerts to Mcity's central server API.
+        I am working with AS3935 lightning detectors, using various testing methods to evaluate their capabilities, range, and response values. Future progress
+        and steps involve connecting the detector to a Particle board and utilizing its cloud for event storage. I'll also be working in python to store detection 
+        information in postgreSQL, develop a triangulation algorithm, and communicate events to to the central server API using websocket communication.
+      </p>
+      <p >My most recent (nearly) completed project was developing wireless trigger devices for the test facility. There were two triggers in
+        particular, one that is button-based and another that is LiDAR-based. I developed printed circuit boards as well as firmware for these devices, and I worked in the Flask
+        framework for server interactions. These devices are built on WiFi development boards, the ESP8266 Feather HUZZAH, and communicate 
+        in real-time with the central server API through websocket communication. Users can run automated tests through Mcity's frontend, Skyline, and these devices act as trigger statements within such tests.
+        These devices are particularly useful in their versatility, and how they improve the particular events users can add to their automated tests in the facility. The button triggers can be shorted with other devices 
+        such as traffic trackers to allow for broader uses such as vehicle detection; the LiDAR triggers offer a variety of configurations by the user, and they can act as 'trip wires' with detection up to 40 meters.
+      </p>
+
+    </div>
+    <div class="w3-third w3-center w3-padding-64">
+      <img src="mcity logo.png" alt="Mcity at the University of Michigan Logo">
+    </div>
+  </div>
+
+  <div class="w3-padding-32 w3-content">
+    <div class="w3-twothird">
+      <h3><b>DaVita, Inc.</b></h3>
+      <h5>In the summer of 2019 I worked as an Application Development Intern at DaVita, Inc.</h5>
+
+      <p >As an intern at DaVita, I was able to gain important skills including evaluating requirements, working with 
+        productivity tools such as Jira and Confluence, as well as working with source control in an engineering team. In terms of technical skills,
+        I gained experience with the Angular framework, as well as important ideas behind/requirements of frontend development. As I became more comfortable with HTML,
+        CSS, and TypeScript, I built a small application as a display of my skills (and a fun way to learn more about something I'm passionate about: the environment!). 
+        It's called Starfish, and you can find it on my <a href="https://github.com/tanvijivtode/Starfish" target="_blank">GitHub.</a>
+      </p>
+
+    </div>
+    
+    <div class="w3-third w3-center">
+      <img src="Davita_Kidney_Care.jpg" alt="DaVita Kidney Care Logo" style="width:217px;height:170px">
+    </div>
+  </div>
+</div>
+
+<!--Organizations-->
+<div id="organizations" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <h1  class="w3-content  w3-center"><b>Organizations</b></h1>
+  <div class="w3-content">
+    <hr>
+    <div class="w3-third w3-center">
+      <img src="MER logo.png" alt="Michigan Electric Racing Logo" style="width:217px;height:217px">
+    </div>
+
+    <div class="w3-twothird">
+      <h3><b>Michigan Electric Racing (MER)</b></h3>
+      <h5 >I'm currently a member of Michigan Electric Racing, as part of the Electric Vehicle Powertrain team.</h5>
+
+      <p >The specific work I've done is in high voltage (HV) circuits. I worked with team members in the HV sub-unit to develop 
+        a schematic and printed circuit board for the safety loop of the powertrain, also known as the shutdown circuit. This particular circuit 
+        recieves signals from other functional circuits in the accumulator (battery), including the battery management system, brake system plausibility device,
+        isolation monitoring device, and e-stop buttons. It interprets these signals to control the accumulator isolation relay, which is essentially the switch 
+        that controls the high voltage system. The goal of this circuit is to use latching for security-- to act as a safety measure in response to any other circuit. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--Artwork-->
+<div  id="art" class="w3-row-padding w3-padding-64 w3-container">
+  <h1 class="w3-content  w3-center"><b>Artwork</b></h1>
+  <div class="w3-content">
+      <h5 class="w3-center w3-row-padding">I have an avid interest in various art forms, particularly painting. Here are some examples of my recent work.</h5>
+    <hr>
+    <div class='container'>
+      <div><img src="first.jpg" class="zoom" style="width:320px;height:250px"></div>
+     <!-- <div><img src="mughal.jpg" class="zoom" style="width:250px; height:300px"></div> -->
+      <div><img src="fifth.JPG" class="zoom" style="width:290px;height:250px"></div>
+      <div><img src="second.jpg" class="zoom" style="width:320px;height:250px"></div>
+      <div><img src="third.jpg" class="zoom" style="width:300px;height:250px"></div>
+      <div><img src="fourth.JPG" class="zoom" style="width:290px;height:250px"></div>
+     </div>
+  </div>
+</div>
+
+
+
+<div id="contact" class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Get in touch with me!</h1>
+  <div class="w3-xlarge">
+    <a href="https://www.pinterest.com/tanvijivtode/_saved/" class="fa fa-pinterest w3-hover-opacity xunder"  target="_blank"></a>
+    <a href="https://www.linkedin.com/in/tanvijivtode/" class="fa fa-linkedin-square w3-hover-opacity xunder" target="_blank"></a>
+    <a href="https://github.com/tanvijivtode" class="fa fa-github w3-hover-opacity xunder" target="_blank"></a>
+    <a href="mailto:tjivtode@umich.edu" class="fa fa-envelope w3-hover-opacity xunder" target="_blank"></a>
+ </div>
+ 
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<i class='fa fa-cog fa-spin'></i> <h5 style="display:inline-block"> Work in progress!</h5>
+<p>© 2020 Tanvi Jivtode</p>
+
+</footer>
+
+
+
+</body>
+</html>
