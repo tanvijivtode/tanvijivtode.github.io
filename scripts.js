@@ -1,4 +1,19 @@
 
+function toggle(id) {
+    acc = document.getElementById(id);
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    acc.classList.toggle("active");
+    console.log("Clicked");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = acc.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+}
 //run typewriter effect once DOM fully loads
 document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
@@ -28,9 +43,10 @@ document.addEventListener('DOMContentLoaded',function(event){
   // start a typewriter animation for a text in the dataText array
   function StartTextAnimation(i) {
      if (typeof dataText[i] == 'undefined'){
-        setTimeout(function() {
-          StartTextAnimation(0);
-        }, 20000);
+        //setTimeout(function() {
+         // StartTextAnimation(0);
+        //}, 20000);
+        return;
      }
      // check if dataText[i] exists
     if (i < dataText[i].length) {
@@ -43,6 +59,7 @@ document.addEventListener('DOMContentLoaded',function(event){
   }
   // start the text animation
   StartTextAnimation(0);
+  console.log("Done");
 })
 
 window.smoothScroll = function(target) {

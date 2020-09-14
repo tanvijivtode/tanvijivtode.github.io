@@ -65,7 +65,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-twothird">
-      <h5 >I'm currently a junior at the University of Michigan- Ann Arbor. I'm interested in the embedded systems space,
+      <h5 >I'm currently a junior at the University of Michigan in Ann Arbor, MI. I'm interested in the embedded systems space,
         particularly firmware development, and am currently learning key embedded concepts through my coursework. I am also involved in organizations including
         Michigan Electric Racing (MER), Women in Electrical and Computer Engineering (WECE), Society of Women Engineers (SWE), and Michigan Sahana. Outside of academics, I'm passionate 
         about various art forms-- from visual artwork, particularly painting, to Indian classical dance. I'm currently starting to explore new mediums, such as 
@@ -83,11 +83,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-content">
     <hr>
     <div class="w3-twothird">
-
+ 
+    
       <h3><b>Mcity at University of Michigan</b></h3>
       <h5>I'm currently working as a Software Engineering Intern at Mcity, an autonomous/connected vehicle test facility.</h5>
 
-      <p >My current project focuses on creating a lightning detection system that is configured to send alerts to Mcity's central server API.
+
+     <button id="1" class="accordion" onclick="toggle(id)">Work I've done</button>
+      <div class="panel">
+              <p >My current project focuses on creating a lightning detection system that is configured to send alerts to Mcity's central server API.
         I am working with AS3935 lightning detectors, using various testing methods to evaluate their capabilities, range, and response values. Future progress
         and steps involve connecting the detector to a Particle board and utilizing its cloud for event storage. I'll also be working in python to store detection 
         information in postgreSQL, develop a triangulation algorithm, and communicate events to to the central server API using websocket communication.
@@ -99,29 +103,51 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         These devices are particularly useful in their versatility, and how they improve the particular events users can add to their automated tests in the facility. The button triggers can be shorted with other devices 
         such as traffic trackers to allow for broader uses such as vehicle detection; the LiDAR triggers offer a variety of configurations by the user, and they can act as 'trip wires' with detection up to 40 meters.
       </p>
+      </div>
+    
+   <!--  <button id = "2" class="accordion" onclick="toggle(id)">Tools, Technologies, and Platforms</button>
+      <div class="panel">
+        <p>Lorem ipsum...</p>
+      </div> -->
+    
+      <button id = "3" class="accordion" onclick="toggle(id)">Learn more about Mcity</button>
+      <div class="panel">
+        <p>Mcity is a connected and automated vehicle test facility located in Ann Arbor, Michigan. As a test facility, they work with various partners in industry, government, and academia to facilitate and contribute to 
+          the potential of emerging mobility. They're doing incredibly exciting work! You can learn more at their <a href="https://mcity.umich.edu/" target="_blank">website.</a></p>
+      </div>
 
     </div>
-    <div class="w3-third w3-center w3-padding-64">
-      <img src="mcity logo.png" alt="Mcity at the University of Michigan Logo">
+    <div class="w3-third w3-center w3-padding-32">
+      <img src="mcity logo.png" alt="Mcity at the University of Michigan Logo" style="width:200px;height:200px">
     </div>
   </div>
 
-  <div class="w3-padding-32 w3-content">
-    <div class="w3-twothird">
+  <div class="w3-padding-64 w3-content">
+    <div class="w3-twothird ">
       <h3><b>DaVita, Inc.</b></h3>
       <h5>In the summer of 2019 I worked as an Application Development Intern at DaVita, Inc.</h5>
-
-      <p >As an intern at DaVita, I was able to gain important skills including evaluating requirements, working with 
+      <button id = "4" class="accordion" onclick="toggle(id)">Work I've done</button>
+      <div class="panel">
+        <p >As an intern at DaVita, I was able to gain important skills including evaluating requirements, working with 
         productivity tools such as Jira and Confluence, as well as working with source control in an engineering team. In terms of technical skills,
         I gained experience with the Angular framework, as well as important ideas behind/requirements of frontend development. As I became more comfortable with HTML,
         CSS, and TypeScript, I built a small application as a display of my skills (and a fun way to learn more about something I'm passionate about: the environment!). 
         It's called Starfish, and you can find it on my <a href="https://github.com/tanvijivtode/Starfish" target="_blank">GitHub.</a>
-      </p>
-
+        </p>
+      </div> 
+      <button id = "5" class="accordion" onclick="toggle(id)">Learn more about DaVita</button>
+      <div class="panel">
+        <p>DaVita provides kidney dialysis services to patients across the US, primarily treating individuals with chronic kidney disease.
+          They're incredibly committed to providing a smooth and comfortable experience for patients and nurses alike, and I became very aware
+          of this through the clinical tool development process that I was able to witness and be a part of. You can learn more about DaVita at 
+          their <a href="https://www.davita.com/" target="_blank">website.</a>
+        </p>
+      </div>
+ 
     </div>
     
-    <div class="w3-third w3-center">
-      <img src="Davita_Kidney_Care.jpg" alt="DaVita Kidney Care Logo" style="width:217px;height:170px">
+    <div class="w3-third w3-center w3-padding-32">
+      <img src="Davita_Kidney_Care.jpg" alt="DaVita Kidney Care Logo" style="width:200px;height:160px">
     </div>
   </div>
 </div>
@@ -131,20 +157,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <h1  class="w3-content  w3-center"><b>Organizations</b></h1>
   <div class="w3-content">
     <hr>
-    <div class="w3-third w3-center">
-      <img src="MER logo.png" alt="Michigan Electric Racing Logo" style="width:217px;height:217px">
+    <div class="w3-third w3-center w3-padding-32">
+      <img src="MER logo.png" alt="Michigan Electric Racing Logo" style="width:200px;height:200px">
     </div>
 
     <div class="w3-twothird">
       <h3><b>Michigan Electric Racing (MER)</b></h3>
       <h5 >I'm currently a member of Michigan Electric Racing, as part of the Electric Vehicle Powertrain team.</h5>
-
-      <p >The specific work I've done is in high voltage (HV) circuits. I worked with team members in the HV sub-unit to develop 
+      <button id = "6" class="accordion" onclick="toggle(id)">Work I've done</button>
+      <div class="panel">
+              <p >The specific work I've done is in high voltage (HV) circuits. I worked with team members in the HV sub-unit to develop 
         a schematic and printed circuit board for the safety loop of the powertrain, also known as the shutdown circuit. This particular circuit 
         recieves signals from other functional circuits in the accumulator (battery), including the battery management system, brake system plausibility device,
         isolation monitoring device, and e-stop buttons. It interprets these signals to control the accumulator isolation relay, which is essentially the switch 
         that controls the high voltage system. The goal of this circuit is to use latching for security-- to act as a safety measure in response to any other circuit. 
       </p>
+      </div>
+
+      <button id = "7" class="accordion" onclick="toggle(id)">Learn more about MER</button>
+      <div class="panel">
+        <p>Michigan Electric Racing is a student-run team, focused on designing, building, and testing a Formula-style electric racecar. The team competes
+          in an annual FSAE competition with other teams across the country. You can learn more about MER <a href="http://umich.edu/~melectric/index.html" target="_blank">here.</a>
+        </p>
+      </div>
+
     </div>
   </div>
 </div>
@@ -169,14 +205,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 
 <div id="contact" class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Get in touch with me!</h1>
+  <h1 class="w3-margin w3-xlarge">Get in touch with me!</h1>
+ <!-- <form action="https://formspree.io/moqpajpk" method="POST">
+    <label>
+      <input type="text" placeholder="Name" name="name">
+    </label>
+    <label>
+      <input type="text" placeholder="Email" name="_replyto">
+    </label>
+    <label>
+      <textarea placeholder="Message" name="message"></textarea>
+    </label>
+
+    <button type="submit">Send</button> 
+  </form> -->
   <div class="w3-xlarge">
-    <a href="https://www.pinterest.com/tanvijivtode/_saved/" class="fa fa-pinterest w3-hover-opacity xunder"  target="_blank"></a>
-    <a href="https://www.linkedin.com/in/tanvijivtode/" class="fa fa-linkedin-square w3-hover-opacity xunder" target="_blank"></a>
+    <a href="https://www.pinterest.com/tanvijivtode/_saved/" class="fa fa-pinterest w3-hover-opacity xunder"
+      target="_blank"></a>
+    <a href="https://www.linkedin.com/in/tanvijivtode/" class="fa fa-linkedin-square w3-hover-opacity xunder"
+      target="_blank"></a>
     <a href="https://github.com/tanvijivtode" class="fa fa-github w3-hover-opacity xunder" target="_blank"></a>
     <a href="mailto:tjivtode@umich.edu" class="fa fa-envelope w3-hover-opacity xunder" target="_blank"></a>
- </div>
- 
+  </div>
 </div>
 
 <!-- Footer -->
