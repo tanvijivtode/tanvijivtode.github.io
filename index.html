@@ -75,12 +75,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-twothird">
-      <h5 >I'm currently a junior at the University of Michigan in Ann Arbor, MI. I'm interested in the embedded systems space,
-        particularly firmware development in C/C++, and am currently learning key embedded concepts through my coursework. I am also involved in organizations including
+      <h5 >I'm currently a Senior at the University of Michigan in Ann Arbor, MI. I'm interested in the embedded systems space,
+        particularly firmware development in C/C++, and am currently learning key embedded concepts through my coursework. I have also been involved in organizations including
         <a href="#organizations">Michigan Electric Racing (MER)</a>, <a href="https://maizepages.umich.edu/organization/wece" target="_blank">Women in Electrical and Computer Engineering (WECE)</a>,
         <a href="https://swe.org/" target="_blank">Society of Women Engineers (SWE)</a>, and <a href="https://www.michigansahana.com/" target="_blank">Michigan Sahana</a>. Outside of academics, I'm passionate 
-        about various art forms-- from visual artwork, particularly painting, to Indian classical dance. I'm currently starting to explore new mediums, such as 
-        digital artwork and oil painting!
+        about various art forms-- from visual artwork, particularly painting, to Indian classical dance. I'm currently starting to explore new creative endeavors such as tailoring!
       </h5>
 
       <h5 class="w3-text-grey">Click <a href="tjivtode_resume_official.pdf" target="_blank">here</a> for a pdf of my resume.</h5>
@@ -91,28 +90,58 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!--Work Experience-->
 <div  id="work" class="w3-row-padding w3-padding-64 w3-container">
   <h1 class="w3-content  w3-center"><b>Work Experience</b></h1>
-  <div class="w3-content">
+   <div class="w3-content">
     <hr>
     <div class="w3-twothird">
  
     
+      <h3><b>Qualcomm</b></h3>
+      <h5>In the summer of 2021, I worked as an Interim Engineering Intern at Qualcomm in their Modem Software team (specifically RF Software).</h5>
+
+
+     <button id="6" class="accordion" onclick="toggle(id)">Work I've done</button>
+      <div class="panel">
+      <p>My project during this internship was to port GNU Project Debugger (GDB) to an external proprietary processor, known as the Integer Unit. The main goal was to improve development on this processor within 
+        the modem subsystem by offering a clean and effective debugging method. By default, GDB will only allow for native debugging (programs running on the same machine), but for our purposes we needed a Remote Serial Protocol (RSP)
+        server to allow GDB to communicate over a physical channel and debug the external target. To attain this, we implemented code on the server side and the target side-- on the server side, we created a Python RSP Server that opened up socket
+        communication with GDB, recieved GDB messages and packaged them in a way that can be understood by our target; on the target side, we developed a C handler to interpret GDB messages and subsequently fulfill any requests through communication
+        with IU. As of now, we have a working proof of concept for performing reads and writes through GDB, and given the success with our work during the summer we can expect to eventually integrate breakpoint functionality. </p>
+      </div>
+    
+   <!--  <button id = "2" class="accordion" onclick="toggle(id)">Tools, Technologies, and Platforms</button>
+      <div class="panel">
+        <p>Lorem ipsum...</p>
+      </div> -->
+    
+      <button id = "7" class="accordion" onclick="toggle(id)">Learn more about Qualcomm</button>
+      <div class="panel">
+        <p> Qualcomm is best known as a key developer of semiconductor and wireless communication products. They do significant work in modem software, which was the team 
+          I was hired into. Over the summer, I was able to interact with many engineers doing some really incredible work as part of this team. You can learn more at their <a href="https://www.qualcomm.com/" target="_blank">website.</a></p>
+      </div>
+
+    </div>
+    <div class="w3-third w3-center w3-padding-32">
+      <img src="qc logo.png" alt="Qualcomm Logo" style="width:200px;height:200px">
+    </div>
+  </div>
+
+
+  <div class="w3-content">
+    <div class="w3-twothird">
+ 
+    
       <h3><b>Mcity at University of Michigan</b></h3>
-      <h5>I have been working as a Software Engineering Intern at Mcity, an autonomous/connected vehicle test facility, since May 2020.</h5>
+      <h5>I worked as a Software Engineering Intern at Mcity, an autonomous/connected vehicle test facility, from May 2020 to April 2021.</h5>
 
 
      <button id="1" class="accordion" onclick="toggle(id)">Work I've done</button>
       <div class="panel">
-              <p >My current project focuses on creating a lightning detection system that is configured to send alerts to Mcity's central server API.
-        I am working with AS3935 lightning detectors, using various testing methods to evaluate their capabilities, range, and response values. Future progress
-        and steps involve connecting the detector to a Particle board and utilizing its cloud for event storage. I'll also be working in python to store detection 
-        information in postgreSQL, develop a triangulation algorithm, and communicate events to to the central server API using websocket communication.
-      </p>
-      <p >My most recent (nearly) completed project was developing wireless trigger devices for the test facility. There were two triggers in
+      <p >My main project was developing wireless trigger devices for the test facility. There were two triggers in
         particular, one that is button-based and another that is LiDAR-based. I developed printed circuit boards as well as firmware for these devices, and I worked in the Flask
         framework for server interactions. These devices are built on WiFi development boards, the ESP8266 Feather HUZZAH, and communicate 
         in real-time with the central server API through websocket communication. Users can run automated tests through Mcity's frontend, Skyline, and these devices act as trigger statements within such tests.
-        These devices are particularly useful in their versatility, and how they improve the particular events users can add to their automated tests in the facility. The button triggers can be shorted with other devices 
-        such as traffic trackers to allow for broader uses such as vehicle detection; the LiDAR triggers offer a variety of configurations by the user, and they can act as 'trip wires' with detection up to 40 meters.
+        These devices are particularly useful in their versatility, and how they improve the particular events users can add to their automated tests in the facility. The newest feature was the addition of over-the-air 
+        (OTA) firmware updates for convenient modifications to the code. The button triggers can be shorted with other devices such as traffic trackers to allow for broader uses such as vehicle detection; the LiDAR triggers offer a variety of configurations by the user, and they can act as 'trip wires' with detection up to 40 meters.
       </p>
       </div>
     
@@ -133,7 +162,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <div class="w3-padding-64 w3-content">
+  <div class="w3-content">
     <div class="w3-twothird ">
       <h3><b>DaVita, Inc.</b></h3>
       <h5>In the summer of 2019 I worked as an Application Development Intern at DaVita, Inc.</h5>
@@ -174,7 +203,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
     <div class="w3-twothird">
       <h3><b>Michigan Electric Racing (MER)</b></h3>
-      <h5 >I'm currently a member of Michigan Electric Racing, as part of the Electric Vehicle Powertrain team.</h5>
+      <h5 >I was a member of Michigan Electric Racing, as part of the Electric Vehicle Powertrain team, from Sept. 2019 to Dec. 2020.</h5>
       <button id = "6" class="accordion" onclick="toggle(id)">Work I've done</button>
       <div class="panel">
               <p >The specific work I've done is in high voltage (HV) circuits. I worked with team members in the HV sub-unit to develop 
